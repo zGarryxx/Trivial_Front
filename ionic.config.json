@@ -1,0 +1,7 @@
+{
+  "name": "Trivial_Front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

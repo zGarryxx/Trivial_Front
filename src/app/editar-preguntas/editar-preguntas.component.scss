@@ -1,0 +1,142 @@
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #ffffff;
+}
+
+/* Contenedor principal */
+.container {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* Títulos */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  flex-grow: 1;
+}
+
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  flex-grow: 1;
+}
+
+/* Lista de preguntas */
+.questions-list {
+  margin-top: 3%;
+}
+
+.questions-list ul {
+  list-style-type: none;
+  margin-top: 3%;
+}
+
+.questions-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.questions-list .botones {
+  margin-left: auto;
+  gap: 20px;
+  display: flex;
+
+}
+
+/* Botones */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.save-btn {
+  background-color: #27ae60; /* Verde elegante */
+  color: #ffffff;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.save-btn:hover {
+  background-color: #2ecc71; /* Verde más claro */
+}
+
+.edit-btn {
+  background-color: #3498db; /* Azul elegante */
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9; /* Azul más oscuro */
+}
+
+.delete-btn {
+  background-color: #e74c3c; /* Rojo elegante */
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; /* Rojo más oscuro */
+}

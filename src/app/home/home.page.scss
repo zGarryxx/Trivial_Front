@@ -1,0 +1,71 @@
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #ffffff;
+}
+
+/* Contenedor principal */
+.container {
+  text-align: center;
+}
+
+/* Títulos */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 12%;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 2%;
+}
+
+/* Botones */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 5%;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Botón Jugar */
+.play-btn {
+  background-color: #27ae60; /* Verde elegante */
+  color: #ffffff;
+}
+
+.play-btn:hover {
+  background-color: #2ecc71; /* Verde más claro */
+}
+
+/* Botón Reglas */
+.rules-btn {
+  background-color: #e74c3c; /* Rojo elegante */
+  color: #ffffff;
+}
+
+.rules-btn:hover {
+  background-color: #c0392b; /* Rojo más oscuro */
+}

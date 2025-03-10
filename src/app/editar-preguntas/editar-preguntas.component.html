@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reglas del Trivial</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Editar Preguntas</h1>
+
+    <form>
+      <div class="campo-form">
+        <div class="campo">
+          <label for="pregunta">Pregunta:</label>
+          <input id="pregunta" type="text" style="width: 50%" required>
+        </div>
+
+        <div class="campo">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" style="width: 25%; background-color: #ffffff" required>
+            <option value="" disabled selected>Seleccione una categoría</option>
+            <option value="geografia">Geografía</option>
+            <option value="historia">Historia</option>
+            <option value="ciencia">Ciencia</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="respuesta">Respuesta:</label>
+          <input id="respuesta" type="text" style="width: 50%" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn save-btn">Guardar</button>
+    </form>
+
+    <div class="questions-list">
+      <h2>Todas las Preguntas</h2>
+      <ul>
+        <li>
+          Esta es una pregunta de ejemplo que puede servir para probar la aplicación.
+          <div class="botones">
+            <button class="btn edit-btn">Editar</button>
+            <button class="btn delete-btn">Eliminar</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
