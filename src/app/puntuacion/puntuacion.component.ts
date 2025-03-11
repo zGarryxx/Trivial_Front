@@ -4,6 +4,7 @@ import { TrivialService } from '../services/trivial.service';
 import { PuntuacionDTO } from '../Modelos/PuntuacionDTO';
 import {CommonModule} from "@angular/common";
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-puntuacion',
@@ -17,11 +18,16 @@ export class PuntuacionComponent implements OnInit {
 
   puntuaciones: PuntuacionDTO[] = [];
 
-  constructor(private trivialService: TrivialService) { }
+  constructor(private trivialService: TrivialService,
+              private router: Router) { }
 
   ngOnInit() {
     this.trivialService.getAllPuntuaciones().subscribe((data: PuntuacionDTO[]) => {
       this.puntuaciones = data;
     });
+  }
+
+  goHome(): void {
+    this.router.navigate(['/home']);
   }
 }

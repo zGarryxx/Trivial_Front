@@ -9,6 +9,31 @@
 </div>
 
 <div class="container" *ngIf="mostrarPreguntas">
-  <h1 class="title">Bienvenido, {{puntuacion.nombreUsuario}}</h1>
-  <p>Aquí puedes responder las preguntas.</p>
+  <div class="toolbar">
+    <h4 class="title2">Bienvenido, {{puntuacion.nombreUsuario}}, aquí puedes responder las preguntas.</h4>
+    <div class="countdown-timer">
+      Tiempo restante: {{ cuentaatras }} segundos
+    </div>
+  </div>
+  <div class="squares-container">
+    <div class="square"
+         *ngFor="let square of [].constructor(12); let i = index"
+         [class.selected]="i === selectedSquareIndex"
+         [class.passed]="i < (selectedSquareIndex ?? -1)">
+      {{i + 1}}
+    </div>
+  </div>
+  <div class="quiz-container" *ngIf="preguntaAleatoria && categoriaAleatoria">
+    <h2 class="category-title">Categoría: {{categoriaAleatoria.nombre}}</h2>
+    <div class="question-box">
+      <p>{{preguntaAleatoria.enunciado}}</p>
+    </div>
+    <div class="answer-container">
+      <input type="text" class="input" placeholder="Escribe tu respuesta" [(ngModel)]="respuesta">
+      <button class="btn accept-btn" (click)="contestarPregunta()">Aceptar</button>
+    </div>
+  </div>
+  <div class="button-container" *ngIf="selectedSquareIndex === 11">
+    <button class="btn access-btn" (click)="verPuntuacion()">Ver mi puntuación</button>
+  </div>
 </div>

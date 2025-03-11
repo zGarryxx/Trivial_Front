@@ -52,6 +52,7 @@ export class EditarPreguntasComponent  implements OnInit {
       respuestaCorrecta: form.value.respuesta,
     };
     this.crearPregunta(pregunta);
+    form.resetForm()
   }
 
   cargarCategorias() {

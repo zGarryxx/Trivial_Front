@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
@@ -54,7 +54,10 @@ export class TrivialService {
   }
 
   contestarPregunta(preguntaDTO: PreguntasDTO, respuesta: string, nombreUsuario: string): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}trivial/pregunta/contestar`, { preguntaDTO, respuesta, nombreUsuario });
+    const params = new HttpParams()
+      .set('respuesta', respuesta)
+      .set('nombreUsuario', nombreUsuario);
+    return this.http.post(`${this.apiUrl}trivial/pregunta/contestar`, preguntaDTO, { params, responseType: 'text' });
   }
 
   getPreguntaIdByEnunciado(enunciado: string): Observable<number> {
