@@ -1,0 +1,65 @@
+// Interfaz para el username
+
+.container {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  height: 100vh;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.input-container {
+  margin-top: 5%;
+}
+
+.input {
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.access-btn {
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #3498db; /* Azul elegante */
+  color: #ffffff;
+}
+
+.access-btn:hover {
+  background-color: #2980b9; /* Azul más oscuro */
+}
+
+// Interfaz para las preguntas
+
+

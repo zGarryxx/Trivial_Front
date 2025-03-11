@@ -20,7 +20,7 @@ export class ToastService {
       warning: '⚠️'
     };
 
-    const duration: number = 3000;
+    const duration: number = 6000;
 
     const toast = await this.toastController.create({
       message: `${emojis[type]} ${message}`,

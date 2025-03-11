@@ -1,3 +1,17 @@
-<p>
-  puntuacion works!
-</p>
+<div class="puntuacion-container">
+  <h1>Puntuaciónes</h1>
+  <div class="puntu">
+    <div *ngFor="let p of puntuaciones" class="puntuacion-item">
+      <label>Nombre de usuario:</label>
+      <span>{{ p.nombreUsuario }}</span>
+      <label>Aciertos:</label>
+      <span>{{ p.aciertos }}</span>
+      <label>Fallos:</label>
+      <span>{{ p.fallos }}</span>
+      <label>Puntuación:</label>
+      <span>{{ p.puntuacion }}</span>
+      <label>Fecha actual:</label>
+      <span>{{ p.fecha | date:'dd/MM/yyyy' }}</span>
+    </div>
+  </div>
+</div>
